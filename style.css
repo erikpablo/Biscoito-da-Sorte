@@ -123,4 +123,10 @@ p {
     color: #FFFFFF;
 
     font-family: "DM Sans", sans-serif;
+    transition: .5s;
+    box-shadow: .2rem .2rem .2rem #55555580;
+}
+
+.btnOpenCookie:hover {
+    background: #cc7700;
 }
