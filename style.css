@@ -1,0 +1,126 @@
+.hide {
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    font-size: 1.6rem;
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main {
+    width: 42.8rem;
+    min-height: 42.4rem;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2rem 5rem #000000cc;
+    border-radius: .5rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    text-align: center;
+}
+
+span {
+    display: block;
+    margin: 1.4rem 0 2rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.imgTremble {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.imgTremble:hover {
+    animation: tremble 0.2s infinite;
+}
+
+@keyframes tremble {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(2px, 2px); }
+    50% { transform: translate(-2px, -2px); }
+    75% { transform: translate(2px, -2px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+/* OpendCookie */
+
+p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+    width: 29.3rem;
+    height: 10.7rem;
+    margin: 1.7rem 0 1.7rem;
+
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem #55555580;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 2.4rem;
+
+    opacity: 0;
+    animation: motivationalMessage 1s ease-out forwards;
+}
+
+@keyframes motivationalMessage {
+    0% {
+        transform: translateY(170%) scale(0.1); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0) scale(1); 
+        opacity: 1; 
+    }
+}
+
+.btnOpenCookie {
+    display: grid;
+    place-items: center;
+
+    width: 17.4rem;
+    height: 5.2rem;
+
+    background: #FF9500;
+    border-radius: .4rem;
+    border: none;
+    margin: 0 auto;
+    
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+
+    font-family: "DM Sans", sans-serif;
+}
