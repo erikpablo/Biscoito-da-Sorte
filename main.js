@@ -2,19 +2,8 @@ const cookieClosed = document.querySelector(".cookieClosed")
 const openCookie = document.querySelector(".openCookie")
 const clickImg = document.querySelector(".imgTremble")
 const btnOpenNewCookie = document.querySelector("button")
-
-function clickCokie() {
-    cookieClosed.classList.toggle('hide')
-    openCookie.classList.toggle('hide')
-}
-
-function btnClickCokie() {
-    cookieClosed.classList.toggle('hide')
-    openCookie.classList.toggle('hide')
-    const randomPhrases = phrases[Math.floor(Math.random() * phrases.length)]
-    document.querySelector("p").textContent = randomPhrases
-}
-
+const cookieBreakingAudio = document.querySelector('#cookieBreaking')
+const initialTime = 1
 const phrases = [
     "Acredite em si mesmo, pois é capaz de alcançar o que deseja.",
     "Cada desafio é uma oportunidade disfarçada.",
@@ -32,6 +21,42 @@ const phrases = [
     "O otimismo é o imã da felicidade.",
     "Acredite no seu potencial e nunca desista."
 ]
+
+function clickCokie() {
+    cookieClosed.classList.toggle('hide')
+    openCookie.classList.toggle('hide')
+    randomPhrasesClick()
+    timeAudio()
+}
+
+function btnClickCokie() {
+    cookieClosed.classList.toggle('hide')
+    openCookie.classList.toggle('hide')
+}
+
+function randomPhrasesClick() {
+    const randomPhrases = phrases[Math.floor(Math.random() * phrases.length)]
+    document.querySelector("p").textContent = randomPhrases
+}
+
+function timeAudio() {
+    cookieBreakingAudio
+    const initialDuration = 2
+
+    cookieBreakingAudio.currentTime = 0
+    startAudio()
+
+    setTimeout(function() {
+        cookieBreakingAudio.pause()
+        cookieBreakingAudio.currentTime = 0
+    }, initialDuration * 1000)
+}
+
+function startAudio() {
+    cookieBreakingAudio.currentTime = initialTime
+    cookieBreakingAudio.play()
+}
+
 
 
 
