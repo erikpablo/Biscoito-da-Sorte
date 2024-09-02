@@ -1,17 +1,19 @@
 // variáveis 
 
-let choice = Number(prompt(`
-    Que tipo de frase você está buscando?
+// let choice = Number(prompt(`
+//     Que tipo de frase você está buscando?
 
-    1. Frases motivacionais  
-    2. Frases Engraçadas 
-    3. Frases Negativas
-`))
+//     1. Frases motivacionais  
+//     2. Frases Engraçadas 
+//     3. Frases Negativas
+// `))
+
 const cookieClosed = document.querySelector(".cookieClosed")
 const openCookie = document.querySelector(".openCookie")
 const clickImg = document.querySelector(".imgTremble")
 const btnOpenNewCookie = document.querySelector("button")
 const cookieBreakingAudio = document.querySelector('#cookieBreaking')
+const optionsphrases = document.querySelector('.optionsphrases')
 const initialTime = 1
 
 // frases 
@@ -75,25 +77,31 @@ const criticalPhrases = [
 function clickCokie() {
     cookieClosed.classList.toggle('hide')
     openCookie.classList.toggle('hide')
-    randomPhrasesClick()
     timeAudio()
 }
 
 function btnClickCokie() {
-    cookieClosed.classList.toggle('hide')
+    optionsphrases.classList.toggle('hide')
     openCookie.classList.toggle('hide')
 }
 
-function randomPhrasesClick() {
-    if(choice == 1) {
+function optionsToggel() {
+    cookieClosed.classList.toggle('hide')
+    optionsphrases.classList.toggle('hide')
+}
+
+
+function chooseOption(number) {
+
+    if(number == 1) {
         let randomPhrases = phrases[Math.floor(Math.random() * phrases.length)]
         document.querySelector("p").textContent = randomPhrases
     } 
-    else if(choice == 2) {
+    else if(number == 2) {
         let randomPhrasesFunny = funnyPhrases[Math.floor(Math.random() * funnyPhrases.length)]
         document.querySelector("p").textContent = randomPhrasesFunny
     } 
-    else if(choice == 3) {
+    else if(number == 3) {
         let randomPhrasesCritical = criticalPhrases[Math.floor(Math.random() * criticalPhrases.length)]
         document.querySelector("p").textContent = randomPhrasesCritical
     }
@@ -118,7 +126,6 @@ function startAudio() {
 }
 
 
-
-
 clickImg.addEventListener('click', clickCokie)
 btnOpenNewCookie.addEventListener('click', btnClickCokie)
+optionsphrases.addEventListener('click', optionsToggel)

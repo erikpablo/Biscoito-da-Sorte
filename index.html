@@ -11,7 +11,7 @@
 </head>
 <body>
     <main>
-        <div class="cookieClosed">
+        <div class="cookieClosed hide">
             <h1>Qual é a sua sorte de hoje?</h1>
             <span>Abra o biscoito e descubra!</span>
             <img src="./image/cookie-closed.jpg" alt="Imagem do biscoito fechado" class="imgTremble">
@@ -19,9 +19,18 @@
 
         <div class="openCookie hide">
             <h2>Aqui está a sua sorte de hoje:</h2>
-            <p>Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.</p>
+            <p>Escolha qual o tipo de franse deseja para o seu dia</p>
             <img src="./image/opened-cookie.jpg" alt="Biscoito aberto">
             <button class="btnOpenCookie">Abrir outro biscoito</button>
+        </div>
+
+        <div class="optionsphrases">
+            <h3>Que tipo de frase você está buscando?</h3>
+            <ul>
+                <li class="option" onclick="chooseOption(1)">Frase motivacional</li>
+                <li class="option" onclick="chooseOption(2)">Frase Engraçada </li>
+                <li class="option" onclick="chooseOption(3)">Frase Negativa</li>
+            </ul>
         </div>
     </main>
 

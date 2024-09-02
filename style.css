@@ -130,3 +130,45 @@ p {
 .btnOpenCookie:hover {
     background: #cc7700;
 }
+
+
+/* option */
+
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+ul li {
+    list-style-type: none; 
+
+    border-radius: .4rem;
+    width: 25rem;
+    padding: 2rem;
+
+    color: white;
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    box-shadow: 0 .2rem .4rem #453a3a;
+    transition: background 1s ease, box-shadow 0.3s ease, transform 0.2s ease
+    
+}
+
+ul li:hover {
+    transform: translateY(-1rem);
+    filter: drop-shadow(0 .5rem 1rem #5A2ECC);
+}
+
+ul li:active {
+    filter: drop-shadow(0 .2rem .4rem #5A2ECC);
+    transform: translateY(2px);
+ }
+  
