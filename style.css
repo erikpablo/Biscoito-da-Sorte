@@ -56,6 +56,7 @@ span {
 
 
 .imgTremble {
+    cursor: pointer;
     display: inline-block;
     transition: transform 0.2s ease-in-out;
 }
@@ -125,6 +126,7 @@ p {
     font-family: "DM Sans", sans-serif;
     transition: .5s;
     box-shadow: .2rem .2rem .2rem #55555580;
+    cursor: pointer;
 }
 
 .btnOpenCookie:hover {
@@ -159,10 +161,10 @@ ul li {
     background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
     box-shadow: 0 .2rem .4rem #453a3a;
     transition: background 1s ease, box-shadow 0.3s ease, transform 0.2s ease
-    
 }
 
 ul li:hover {
+    cursor: pointer;
     transform: translateY(-1rem);
     filter: drop-shadow(0 .5rem 1rem #5A2ECC);
 }
