@@ -18,3 +18,5 @@ O objetivo deste projeto é proporcionar uma experiência divertida e simples, o
 - **Frases Aleatórias**: O jogo possui uma coleção de frases que são exibidas aleatoriamente.
 - **Design Responsivo**: O jogo é adaptável a diferentes tamanhos de tela, proporcionando uma boa experiência tanto em dispositivos móveis quanto em desktops.
 
+![image](https://github.com/user-attachments/assets/e1d02e88-a089-4dfa-847e-f1594c6324d5)
+![image](https://github.com/user-attachments/assets/ce71a860-869d-4e3d-a51e-f216884130a8)
